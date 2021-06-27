@@ -26,7 +26,8 @@ $.getJSON(
                     <div class="article-title">
                         ${item.notes}
                     </div>
-                    <img src="${item.thumbnail}" style="width: 40vw;border-radius:16px;">
+                    <br>
+                    <img src="${item.thumbnail}" style="height: 40vh;border-radius:16px;">
                 </header>
                 <div class="author">
                     <div class="profile"></div>
