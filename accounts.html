@@ -27,5 +27,16 @@
         
         <script src="/js/accounts.js" async defer></script>
         <script src="/js/crypto.js"></script>
+        <script type="text/javascript">
+        var source = '/img/sparkles.mp3';
+        var audio = document.createElement("audio");
+        audio.autoplay = true;
+        audio.src = source;
+        audio.load();
+        audio.addEventListener("load", function() { 
+            audio.play(); 
+        }, true);
+        
+        </script>
     </body>
 </html>
