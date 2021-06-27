@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    background-color: #100e17;
+}
+
+.card-container {
+    width: 1000px;
+    overflow-x: scroll;
+    display: flex;
+    background-color: #100e17;
+    padding: 3rem;
+}
+
+.card {
+    min-width: 300px;
+    height: 350px;
+    border-radius: 16px;
+    background-color: #17141d;
+    box-shadow: -1rem 0 3rem #000;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    transition: 0.2s;
+}
+
+.date {
+    color: #8a8a8a;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0 1rem;
+}
+
+.tags div {
+    font-size: 9px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border: 3px solid #28242f;
+    border-radius: 2rem;
+}
+
+.card .category-title {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.card .article-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.card .article-header {
+    margin-bottom: auto;
+}
+
+.card .author {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+}
+
+.author .info .caption {
+    color: #8a8a8a;
+}
+
+.card:not(:first-child) {
+    margin-left: -130px;
+}
+
+.card:hover {
+    transform: translateY(-1rem);
+}
+
+.card:hover~.card{
+    transform: translateX(130px);
+}
+
+::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+   }
+   ::-webkit-scrollbar-thumb {
+    background: linear-gradient(13deg, #dd00ff 14%,#000000 64%);
+    border-radius: 10px;
+   }
+   ::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(13deg, #000000 14%,#dd00ff 64%);
+   }
+   ::-webkit-scrollbar-track{
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: inset 7px 10px 12px transparent;
+   }
