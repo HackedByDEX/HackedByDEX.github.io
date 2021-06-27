@@ -1,3 +1,21 @@
+
+console.log("Disclaimer: Accounts are traded accounts. The developer of this site holds no affiliation to the service/s provided.");
+
+/*
+
+const music = new Audio('/img/LORN_TIMESINK_Resonata_Flip.mp3');
+music.load();
+
+function mloop(){
+	try{
+		music.play();
+	} catch (e){
+		setTimeout(mloop, 100)
+	}
+}
+mloop();
+
+*/
 let mouse = {x: 0, y: 0};
 $('body').on('mousemove', function(e){
     mouse.x = e.pageX;
@@ -6,14 +24,8 @@ $('body').on('mousemove', function(e){
 
 function doIt() {
 
-
-
     // THREE START
-
 	let camera, scene, renderer;
-
-
-
 	let textureCube, sphereMesh, sphereMaterial;
 
 			init();
@@ -53,6 +65,13 @@ function doIt() {
 				sphereMaterial = new THREE.MeshLambertMaterial( { envMap: textureCube } );
 				sphereMesh = new THREE.Mesh( geometry, sphereMaterial );
 				scene.add( sphereMesh );
+
+				const texture = new THREE.TextureLoader().load( '/img/test.png' );
+				// immediately use the texture for material creation
+				const material = new THREE.MeshBasicMaterial( { map: texture } );
+				let newMesh    = new THREE.Mesh( geometry, material );
+
+				//scene.add( newMesh);
 
 				//
 

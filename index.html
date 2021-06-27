@@ -27,9 +27,52 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div style="position: absolute;">
-            <button class="w3-button">Accounts</button>
+
+
+<!--
+            <audio autoplay>
+            <source src="/img/LORN_TIMESINK_Resonata_Flip.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+-->
+
+
+        <div style="
+        top: 10vh;
+        z-index: 10;
+        position: absolute;
+        cursor: pointer;
+        left: 35%;
+        " onclick="location.href = '/accounts.html'">
+              <h1>HackedByDEX</h1>
+              <span id="btn-span" style="border: 1px solid rgba(255, 255, 255, 0.118);border-radius: 2px;">
+                <span id="a" hidden>A </span>
+                <span id="c" hidden>C </span>
+                <span id="c1" hidden>C </span>
+                <span id="o" hidden>O </span>
+                <span id="u" hidden>U </span>
+                <span id="n" hidden>N </span>
+                <span id="t" hidden>T </span>
+                <span id="s" hidden>S</span>
+              </span>
         </div>
+
+        <script>
+            let fadeIn = () => {
+                let i=0;
+                for(let item of ['a', 'c', 'c1', 'o', 'u', 'n', 't', 's']){
+                    setTimeout(()=>{
+                        $('#' + item).show().addClass('fade-in glow');
+                        setTimeout(()=>{
+                            $('#' + item).show().removeClass('glow');
+                        }, 600 * i);
+                    }, 300 * i)
+                    i++;
+                }
+                setTimeout(fadeIn, 10000);
+            };
+            fadeIn();
+        </script>
 
         <div style="position: absolute;">
 
@@ -37,8 +80,12 @@
 
         <div id="container"></div>
 
-        <script src="/js/fractals.js">
+        <div hidden>
+            <iframe width="10%" height="5" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/736240672&color=%232c2c2c&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+            </iframe>
+        </div>
 
+        <script src="/js/fractals.js">
         </script>
     </body>
 </html>
